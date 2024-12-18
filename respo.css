@@ -1,0 +1,100 @@
+@media (max-width:568px) {
+  .logo {
+    font-size: 3rem;
+  }
+
+  .menu-button {
+    display: block;
+    /*botão escondido do sanduiche*/
+
+  }
+
+  nav {
+    /*Configurando a NAV*/
+    display: none;
+    background-color: #040406;
+    width: 100%;
+    top: 85px;
+    /*Direcionar a Nav(Cima e Baixo)*/
+    position: absolute;
+    /*Colocar menu no sanduiche*/
+    border-radius: 10px;
+  }
+
+.show-menu nav {
+  display: block;
+}
+
+nav ul {
+  flex-direction: column;
+  /*Colocar menu no sanduiche*/
+}
+
+nav ul li {
+  width: 100%;
+  padding: 0.1rem;
+  text-align: right;
+
+}
+
+nav ul li :last-child {
+border-radius: 50px;
+}
+
+.header-bottom-side{/*Colocar um encima do outro no celular*/
+  flex-direction: column;
+  text-align: center;/*Centralizar conteudo no celular*/
+  padding: 4rem;
+}
+
+
+.cols-3{/*Colocar um encima do outro no celular(anzol, linha e vara*/
+ grid-template-columns: repeat(1, 1fr);
+ gap: 50px;
+}
+.cols-4{/*Colocar um encima do outro no celular(anzol, linha e vara*/
+  grid-template-columns: repeat(1, 1fr);/*Coluna/Quantidade de img em cada coluna*/
+  gap: 15px;
+ }
+.product-name, .rate, .product-price{/*Desembolar o conteúdo*/
+  overflow: hidden;
+  font-size: 16px;
+}
+section .header-bottom-side{/*Colocar um encima do outro no celular*/
+  flex-direction: column-reverse;
+  text-align: center;/*Centralizar conteudo no celular*/
+  padding: 4rem;
+}
+.comentarios{/*Espaçamento dentro do comentarios*/
+  flex-direction: column;
+  padding: 2rem;
+
+}
+.comment{/*Espaçamento entre cada comentario*/
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+.comment p:first-child{/*Aumentar o tamanho das letras do comentarios*/
+  font-size: 20pt;
+}
+.comennt p{
+  font-size: 20pt;
+}
+.footer{
+text-align: center;
+margin-top: 20px;
+font-size: 16px;
+}
+.store-links img{
+  text-align: center;
+}
+.logo-footer{
+  font-size: 30px;
+  align-items: center;
+  margin: left;
+}
+
+.page-inner-content-footer {
+
+
+}

@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    /*colocar do tamanho do elemento */
+    padding: 0;
+    /*define uma a distância entre o conteúdo de um elemento e suas bordas*/
+    margin: 0;
+    /*define a área de margem nos quatro lados do elemento*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /*define a fonte*/
+}
+
+/*herder*/
+.navbar {
+    /*config nav*/
+    background-color: #002c2b;
+    padding: 1rem;
+    /*define uma a distância entre o conteúdo de um elemento e suas bordas*/
+    position: sticky;
+    /*comando que fixa a barra de nav*/
+    top: 0;
+    /*posiciona a barra de nav no topo da página*/
+    z-index: 100;
+    /*ficar sempre a mostra*/
+    box-shadow: 10px 0px 10px #0a837f;
+    /*Sombra na margem*/
+}
+
+.herder-inner-content {
+    max-width: 100%;
+    /*limita a largura do conteúdo interno para não ultrapassar a largura da página*/
+    margin-left: auto;
+    /*define as dimensões da margem esquerda (distância do elemento para o elemento conseguinte)*/
+    margin-right: auto;
+    /*define as dimensões da margem esquerda (distância do elemento para o elemento conseguinte)*/
+}
+
+.logo {
+    color: #ffbc11;
+    /*Cor da logo*/
+}
+
+.logo span {
+    color: #ff3d00;
+    /*Cor da logo*/
+}
+
+.navbar>div {
+    display: flex;
+    /*organiza os elementos em linhas*/
+    justify-content: space-between;
+    /*centraliza os elementos entre si*/
+    align-items: center;
+    /*centraliza os elementos verticalmente*/
+    position: relative;
+    /* alterar a posição de um elemento tendo como referência a posição inicial dele*/
+}
+
+/*navegação*/
+nav ul {
+    display: flex;
+    /*organiza os elementos em linhas*/
+    list-style: none;
+    /*remove as marcas de lista*/
+    align-items: center;
+    /*centraliza os elementos verticalmente*/
+    flex-direction: row;
+}
+
+nav ul li {
+    color: #ffbc11;
+    margin-right: 1.5rem;
+    /*define todas as margens individuais de uma só vez.*/
+    cursor: pointer;
+    /*virar o mãozinha ao passar o mouse*/
+}
+
+nav ul li:hover {
+    color: #ff3d00;
+    transform: translateY(-5px);
+    /*é uma função de transformação 2D que translada um elemento ao longo do eixo y*/
+    transition: all 0.4s ease-in-out;
+    /*Tempo de Tranformação/transição*/
+    font-weight: bold;
+    /*Tranformar*/
+}
+
+.nav-icon-container {
+    display: flex;
+    /*organiza os elementos em linhas*/
+    align-items: center;
+    /*centraliza os elementos verticalmente*/
+}
+
+.nav-icon-container img {
+    width: 50px;
+    /*Configura a largura*/
+    cursor: pointer;
+    /*organiza os elementos em linhas*/
+}
+
+.herder-inner-content img:first-child
+
+/*aplicar apenas no primeiro filho*/
+    {
+    margin-right: 1rem;
+    /*organiza o espaço do elemento*/
+}
+
+.menu-button {
+    display: none;
+    /*oculta o botão*/
+}
+
+.header-bottom-side {
+    display: flex;
+    /*Config um ao lado do outro*/
+    align-items: center;
+    /*centraliza os elementos verticalmente*/
+    justify-content: center;
+    padding: 1rem;
+    background-image: radial-gradient(#fff, #002c2b);
+}
+
+.header-bottom-side-left {
+    height: 100%;
+    /*Altura*/
+    flex-basis: 50%;
+    /*Divide um ao lado do outro*/
+    padding-left: 40px;
+
+}
+
+.header-bottom-side-left h1 {
+    font-size: 3.2rem;
+    /*Aumenta a fonte*/
+    margin-bottom: 2rem;
+    /*Descolar do paragrafo*/
+    color: #ffbc11;
+    padding-left: 40px;
+}
+
+.header-bottom-side-left h1 span {
+    color: #ff3d00;
+
+}
+
+.header-bottom-side-left p {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 14pt;
+    /*Aumenta a fonte*/
+    padding-left: 40px;
+}
+
+.header-bottom-side-left button {
+    /*Configurando o Botão Conheça Mais*/
+    background-color: #ff3d00;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    /*Borda redonda*/
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.header-bottom-side-left button:hover {
+    /*Sombra ao passar o mouse encima do botão*/
+    background-color: #ffbc11;
+}
+
+.header-bottom-side-right {
+    /*Configurando posição da imagem lado direito*/
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-bottom-side-right img {
+    /*Configurando tamanho da imagem*/
+    width: 400px;
+    /*largura*/
+    filter: drop-shadow(30px 0px 5px);
+    /*Sombra na imagem (3D)*/
+}
+
+main {
+    background-image: radial-gradient(#fff, #0b2712);
+}
+
+.green-background {
+    background-image: radial-gradient(#fff, #ff3d00);
+    /*Configurando cor de fundo das imagens degradê (anzol, linha e vara*/
+
+}
+
+.page-inner-content {
+    width: 100%;
+    margin: 0 auto;
+}
+.page-inner-content-footer {
+    display: flex;
+    width: 100vw;
+    gap: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.cols {
+    /*Colocando imagens uma ao lado da outra(anzol, linha e vara*/
+    display: grid;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+}
+
+.cols-3 {
+    /*Produtos(anzol, linha e vara*/
+    grid-template-columns: repeat(3, 1fr);
+    /*Apresentar em 3 colunas*/
+    gap: 3rem;
+}
+
+.section-title {
+    padding: 30px;
+    /*Titulo(Lançamento)*/
+    text-align: center;
+    /*Centralizar(Lançamento)*/
+    margin-top: 4rem;
+    font-size: 37px;
+}
+
+.subtitle-underline {
+    /*Config Subtitulo traço Anderline (_) */
+    width: 100px;
+    height: 5px;
+    background-color: rgba(234, 234, 11, 0.8);
+    margin: 8px auto 0 auto;
+    border-radius: 9999px;
+}
+
+.product {
+    width: 200px;
+    /*Configurando a imagem do produto*/
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-name {
+    /*Configurando a descrição do produto*/
+    font-weight: 600;
+    margin-top: 10px;
+
+
+}
+
+.rate {
+    /*Configurando as estrelas*/
+    color: #002c2b;
+    font-size: 20px;
+}
+
+.product-price {
+    /*Configurando o preço do produto*/
+    font-size: 24px;
+}
+
+.product-price span {
+    /*Configurando a cor do preço(tag span)*/
+    color: #0f0f17;
+    font-weight: 600;
+}
+
+.cols-4 {
+    /*Produtos(anzol, linha e vara*/
+    grid-template-columns: repeat(4, 1fr);
+    /*Apresentar em 3 colunas*/
+    gap: 16px;
+    /*Distancia*/
+    margin-left: 50px;
+    /*Configurar pra não sair da margem da pagina*/
+
+}
+
+.cols>* {
+    cursor: pointer;
+    /*Virar mãozinha*/
+    transition: all 0.5s;
+    /*tempo de transição*/
+}
+
+.cols>*:hover {
+    transform: scale(1.05);
+    /*Transformando transição da imagem(3D)*/
+}
+
+
+.orange-background {
+    background-image: radial-gradient(#fff, #ff3d00);
+    /*Configurando cor de fundo das imagens degradê (anzol, linha e vara*/
+}
+
+section .header-bottom-side {
+    flex-direction: row-reverse;
+    /*Reverter o lado da imagem da direita pra esquerda*/
+}
+
+.comentarios {
+    /*Comentarios*/
+    display: flex;
+    /*Colocar um ao lado do outro*/
+    padding: 4rem 2rem;
+    justify-content: space-between;
+    /*Espaçamento por igual entre o conteudo*/
+}
+
+.comment {
+    /*Comentarios*/
+    display: flex;
+    /*Colocar um ao lado do outro*/
+    flex-direction: column;
+    /*Conteudo um encima do outro*/
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    text-align: justify;
+    box-shadow: 0 0 15px #afafaf;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 1rem 2rem;
+    background-color: #f0724c;
+}
+
+.comment:hover {
+    transform: scale(1.05);
+}
+.comment p:first-child{/*Configurando primeiro paragrafo*/
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+.comment p:last-child{/*Configurando ultimo paragrafo*/
+    font-weight: bold ;
+    font-size: 2rem;
+}
+.greeen-background{
+    background-image: radial-gradient( #fff,#002c2b);
+}
+.footer{/*Configurando o Footer*/
+display: block;
+align-items: center;
+padding: 4rem 3rem;
+gap: 40rem;
+}
+.download-options>*{
+ margin-right: 1rem 0;
+ padding: 5px;
+}
+.download-options p:first-child{
+    font-weight: bold;
+    color: #03300f;
+}
+.download-options>div{
+display: flex;
+}
+.download-options img{
+    cursor: pointer;
+}
+.logo-footer{
+text-align: center;
+}
+/* Estilo do título */
+.links-footer h2 {
+    color: #ffbc11;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Estilo da lista de links */
+.links-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo dos itens da lista */
+.links-footer li {
+    margin-bottom: 0.75rem;
+}
+
+/* Estilo dos links */
+.links-footer a {
+    color: #333; /* Cor do texto do link */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Efeito de transição suave */
+}
+
+/* Efeito de hover nos links */
+.links-footer a:hover {
+    color: #ffbc11; /* Cor de hover */
+}
+
+/* Foco no link para acessibilidade */
+.links-footer a:focus {
+    outline: 2px solid #ffbc11;
+    outline-offset: 4px;
+}
+
+.copyright{
+color: #03300f;
+padding: 2rem 0;
+text-align: center;
+}
